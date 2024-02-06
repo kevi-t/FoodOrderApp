@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Data
@@ -11,13 +12,12 @@ public class Orders {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long order_id;
 
     @Temporal(TemporalType.TIMESTAMP)
     private Date orderDate;
 
-//    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
-//    private List<OrderItem> orderItems;
-
+    @OneToMany(mappedBy = "orders", cascade = CascadeType.ALL)
+    private List<OrderItem> orderItems;
 
 }

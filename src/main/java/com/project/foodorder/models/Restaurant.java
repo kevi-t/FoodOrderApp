@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 
-import java.util.Collection;
 import java.util.List;
 
 @Entity
@@ -12,7 +11,7 @@ import java.util.List;
 public class Restaurant {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long restaurant_id;
 
     @NotNull
     private String name;

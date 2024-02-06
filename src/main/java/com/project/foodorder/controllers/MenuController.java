@@ -1,5 +1,7 @@
 package com.project.foodorder.controllers;
 
+import com.project.foodorder.dtos.MenuDTO;
+import com.project.foodorder.dtos.RestaurantDTO;
 import com.project.foodorder.models.Menu;
 import com.project.foodorder.services.MenuService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,10 +23,16 @@ public class MenuController {
         this.menuService = menuService;
     }
 
-    @GetMapping("/restaurant/{restaurantId}")
-    public List<Menu> getMenusByRestaurant(@PathVariable Long restaurantId) {
-        return menuService.getMenusByRestaurant(restaurantId);
+    @GetMapping
+    public List<MenuDTO> getAllMenus() {
+
+        return menuService.getAllMenus();
     }
+
+//    @GetMapping("/restaurant/{restaurantId}")
+//    public List<Menu> getMenusByRestaurant(@PathVariable Long restaurantId) {
+//        return menuService.getMenusByRestaurant(restaurantId);
+//    }
 
     // other controller methods...
 }

@@ -29,7 +29,7 @@ public class RestaurantService {
             RestaurantDTO restaurantDTO = new RestaurantDTO();
 
             // Set properties on restaurantDTO based on properties of the restaurant entity
-            restaurantDTO.setId(restaurant.getId());
+            restaurantDTO.setId(restaurant.getRestaurant_id());
             restaurantDTO.setCuisine(restaurant.getCuisine());
             restaurantDTO.setLocation(restaurant.getLocation());
             restaurantDTO.setName(restaurant.getName());
