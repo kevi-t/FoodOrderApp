@@ -26,3 +26,7 @@ Submission:
 1. Host your code on a version control platform (e.g., GitHub,GitLab) to showcase your development process.
 2. Ensure your code is well-organized, documented, and follows best practices.
 3. Provide clear instructions on how to set up and run your API locally.
+
+
+## Database design:
+<img src="schema_design.png"/>
